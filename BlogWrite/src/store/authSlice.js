@@ -6,7 +6,7 @@ const initialState = {
 }    
 const authSlice = createSlice({
     name: 'auth',
-    initialState,
+    initialState, 
     reducers: {
         login: (state, action) => {
             state.status = true;
@@ -18,6 +18,7 @@ const authSlice = createSlice({
         }
     }
 });
+
 
 //we will be tracking these two only, further we will make a post slice 
 

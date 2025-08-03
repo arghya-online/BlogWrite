@@ -38,15 +38,15 @@ export class AuthService {
             }
         }
 
-        async getCurrentUser(){
+        async getCurrentUser() {
             try {
-                return await this.account.get();
+              return await this.account.get();
             } catch (error) {
-                console.log("Appwrite serive :: getCurrentUser :: error", error);
+              console.log("Appwrite service :: getCurrentUser :: User not logged in");
+              return null;
             }
-
-            return null;
         }
+
 
         async logout(){
             try {
@@ -56,6 +56,6 @@ export class AuthService {
             }
         }
 }    
-const AuthService = new AuthService();
+const authService = new AuthService();
 
-export default AuthService
+export default authService
